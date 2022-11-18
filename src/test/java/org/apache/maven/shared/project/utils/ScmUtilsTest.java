@@ -24,6 +24,7 @@ import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.Collections;
 
 import org.apache.maven.model.Model;
@@ -59,7 +60,7 @@ public class ScmUtilsTest
         Model parentModel = mock( Model.class );
         when( parentModel.getModules() ).thenReturn( Collections.singletonList( "module" ) );
         when( parent.getModel() ).thenReturn( parentModel );
-        File parentBasedir = File.createTempFile( "tmpBasedir", null );
+        File parentBasedir = Files.createTempFile( "tmpBasedir", null ).toFile();
         when( parent.getBasedir() ).thenReturn( parentBasedir );
 
         MavenProject project = mock( MavenProject.class );
@@ -85,7 +86,7 @@ public class ScmUtilsTest
         Model parentModel = mock( Model.class );
         when( parentModel.getModules() ).thenReturn( Collections.singletonList( "module" ) );
         when( parent.getModel() ).thenReturn( parentModel );
-        File parentBasedir = File.createTempFile( "tmpBasedir", null );
+        File parentBasedir = Files.createTempFile( "tmpBasedir", null ).toFile();
         when( parent.getBasedir() ).thenReturn( parentBasedir );
 
         MavenProject project = mock( MavenProject.class );
