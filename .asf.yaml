@@ -17,7 +17,7 @@
 # see https://s.apache.org/asfyaml
 
 github:
-  description: "Apache Maven Project Utils"
+  description: "Apache Maven Project Utils (RETIRED)"
   homepage: https://maven.apache.org/shared/maven-project-utils/
   labels:
     - java
